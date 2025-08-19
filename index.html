@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Zoom Tech – ZOOM into your future of TECH</title>
+  <meta name="description" content="Zoom Tech: ZOOM into your future of TECH" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <a href="#home"><span>Zoom Tech</span></a>
+      </div>
+      <nav class="menu">
+        <a href="#mdm" class="active">MDM Files</a>
+        <a href="#services">Online Services</a>
+        <a href="#courses">Courses</a>
+        <a href="#tools">Tools</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="cta">
+        <a class="btn btn-ghost" href="https://wa.me/254795540536" target="_blank" rel="noreferrer">WhatsApp</a>
+        <button class="btn btn-primary" id="openCart">Cart</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <!-- Hero -->
+    <div class="hero">
+      <div class="card copy">
+        <h1>ZOOM into your future of TECH</h1>
+        <p class="sub">Instant digital delivery, payments, and expert support. Power up your phone repair business with Zoom Tech.</p>
+        <div class="badges">
+          <span class="badge">Instant Download</span>
+          <span class="badge">Kenya MPESA Ready</span>
+          <span class="badge">Safe & Verified Files</span>
+          <span class="badge">24/7 Support</span>
+        </div>
+        <div class="cta">
+          <a href="#mdm" class="btn btn-primary">Browse MDM Files</a>
+          <a href="#services" class="btn btn-ghost">View Online Services</a>
+        </div>
+        <div class="stat-strip">
+          <div class="stat"><b id="statFiles">250+</b><span class="muted">Files</span></div>
+          <div class="stat"><b>99.9%</b><span class="muted">Uptime</span></div>
+          <div class="stat"><b>4.9/5</b><span class="muted">Ratings</span></div>
+          <div class="stat"><b>&lt; 5 min</b><span class="muted">Delivery</span></div>
+        </div>
+      </div>
+      <div class="card visual">
+        <svg viewBox="0 0 600 360" width="100%" height="100%" role="img" aria-label="Tech abstract">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#4cc9f0" stop-opacity="0.85"/>
+              <stop offset="100%" stop-color="#39c371" stop-opacity="0.85"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="600" height="360" fill="url(#g1)" opacity="0.08"/>
+          <g fill="none" stroke="#4cc9f0" opacity="0.45">
+            <path d="M0,300 Q150,200 300,260 T600,220"/>
+            <path d="M0,200 Q160,120 320,160 T600,140"/>
+            <path d="M0,120 Q180,80 360,110 T600,90"/>
+          </g>
+          <g opacity="0.3">
+            <circle cx="120" cy="220" r="60" fill="#4cc9f0"/>
+            <circle cx="420" cy="120" r="80" fill="#39c371"/>
+            <circle cx="360" cy="260" r="40" fill="#a78bfa"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- MDM Files -->
+    <section id="mdm">
+      <h2>MDM Files</h2>
+      <div class="toolbar">
+        <input id="search" class="input" placeholder="Search model e.g. A146B, Infinix X6817…" />
+
+
+        <div style="display:flex; gap:10px; align-items:center">
+          <select id="brandFilter" class="input">
+            <option value="">All Brands</option>
+            <option>Samsung</option>
+            <option>Infinix</option>
+            <option>Itel</option>
+            <option>Tecno</option>
+            <option>Nokia</option>
+          </select>
+          <select id="typeFilter" class="input">
+            <option value="">All Types</option>
+            <option value="MDM">MDM</option>
+            <option value="FRP">FRP</option>
+            <option value="ISP">ISP</option>
+          </select>
+        </div>
+      </div>
+      <div id="mdmGrid" class="grid"></div>
+    </section>
+
+    <!-- Online Services -->
+    <section id="services">
+      <h2>Online Services</h2>
+      <div class="grid" id="servicesGrid">
+        <!-- Filled by JS -->
+      </div>
+    </section>
+
+    <!-- Courses -->
+    <section id="courses">
+      <h2>Courses</h2>
+      <div class="grid" id="coursesGrid">
+      </div>
+    </section>
+
+    <!-- Tools -->
+    <section id="tools">
+      <h2>Tools & Software</h2>
+      <div class="grid" id="toolsGrid"></div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About Zoom Tech</h2>
+      <div class="card item">
+        <p>We help technicians unlock, repair and flash devices faster with safe MDM files, reliable online services and hands-on training. Based in Kenya, serving customers worldwide.</p>
+        <ul class="muted">
+          <li>Secure payments.</li>
+          <li>100% Delivery for digital items.</li>
+          <li>Dedicated WhatsApp support for clients.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact & Support</h2>
+      <div class="grid">
+        <div class="card item">
+          <div class="title">Send us a message</div>
+          <form id="contactForm" onsubmit="event.preventDefault(); alert('Thanks! We will reply by email/WhatsApp.'); this.reset();">
+            <div style="display:grid; gap:10px">
+              <input class="input" required placeholder="Your name"/>
+              <input class="input" type="email" required placeholder="Your email"/>
+              <textarea class="input" rows="4" required placeholder="How can we help?"></textarea>
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+        <div class="card item">
+          <div class="title">Quick contacts</div>
+          <p class="muted">WhatsApp: <a href="https://wa.me/254795540536" target="_blank" rel="noreferrer">+254 795540536</a><br>Email:zoomtech254@gmail.com</p>
+          <p class="muted">Business hours: Mon–Sat 9:00–18:00 (EAT)</p>
+          <p class="muted">0n sundays:11:00–18:00 (EAT)</p>
+        </div>
+        <div class="card item">
+          <div class="title">Legal</div>
+          <p class="muted"><a href="#" onclick="openPolicy('terms')">Terms & Conditions</a> · <a href="#" onclick="openPolicy('privacy')">Privacy Policy</a> · <a href="#" onclick="openPolicy('refund')">Refund Policy</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap">
+      <div>© <span id="year"></span> Zoom Tech. All rights reserved.</div>
+      <div>Built by Don Carlos · Secure · Fast</div>
+    </div>
+  </footer>
+
+  <!-- Cart Floating Button -->
+  <button class="cart-fab" id="fab" title="Open cart">
+    🛒
+    <small id="cartCount">0</small>
+  </button>
+
+  <!-- Cart Modal -->
+<div class="modal" id="cartModal" aria-hidden="true" role="dialog" style="background:white; padding:20px; border-radius:12px;">
+  <div class="sheet">
+    <div class="sheet-head">
+      <strong>Checkout</strong>
+      <button class="btn btn-ghost" id="closeCart">Close</button>
+    </div>
+    <div class="sheet-body">
+      <div id="cartEmpty" class="muted">Your cart is empty.</div>
+      <div id="cartArea" style="display:none">
+        <table style="width:100%; background:white;">
+          <thead>
+            <tr><th>Item</th><th>Type</th><th>Qty</th><th>Price ($)</th><th></th></tr>
+          </thead>
+          <tbody id="cartItems"></tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3" style="text-align:right"><strong>Subtotal</strong></td>
+              <td id="subtotal">0</td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <!-- 📌 Order Form Section -->
+      <div id="orderForm" style="margin-top:20px; max-width:400px; background:white; padding:15px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+        <h3>Customer Details</h3>
+        <form onsubmit="sendOrderWhatsApp(event)">
+          <div style="margin-bottom:10px;">
+            <label>Name:</label><br>
+            <input type="text" id="custName" placeholder="Your Name" style="width:100%; padding:8px;">
+          </div>
+          <div style="margin-bottom:10px;">
+            <label>Phone:</label><br>
+            <input type="text" id="custPhone" placeholder="2547XXXXXXXX" style="width:100%; padding:8px;">
+          </div>
+          <div style="margin-bottom:10px;">
+            <label>Note (optional):</label><br>
+            <textarea id="custNote" placeholder="Any notes for your order..." style="width:100%; padding:8px;"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Order via WhatsApp</button>
+          <button type="button" class="btn btn-ghost" onclick="clearCart()">Clear Cart</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  // --- WhatsApp Order Sender ---
+  const WHATSAPP_NUMBER = "254795540536"; // ← your business WhatsApp number (no +, no spaces)
+
+  function sendOrderWhatsApp(e) {
+    e.preventDefault(); // stop page reload
+
+    if (!cart.length) {
+      alert("Your cart is empty.");
+      return;
+    }
+
+    // Collect form values
+    const name  = document.getElementById("custName").value.trim();
+    const phone = document.getElementById("custPhone").value.trim();
+    const note  = document.getElementById("custNote").value.trim();
+
+    const lines = [];
+    lines.push("*Zoom Tech – New Order*");
+    if (name)  lines.push(`*Name:* ${name}`);
+    if (phone) lines.push(`*Phone:* ${phone}`);
+    if (note)  lines.push(`*Note:* ${note}`);
+    lines.push("");
+    lines.push("*Items:*");
+
+    let subtotal = 0;
+    cart.forEach((c, i) => {
+      const total = c.price * c.qty;
+      subtotal += total;
+      lines.push(`${i + 1}. ${c.title} — ${c.type}  x${c.qty}  = $ ${money(total)}`);
+    });
+
+    lines.push("");
+    lines.push(`*Subtotal:* $ ${money(subtotal)}`);
+    lines.push("*Preferred Payment:* MPESA 0795540536 NAME: CARLOS");
+    lines.push("*Preferred Payment:* BINANCE PAY ID  790810624 NAME: Don_cl");
+    lines.push("");
+    lines.push("Please confirm availability. Thank you!");
+
+    const message = lines.join("\n");
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+    // Open WhatsApp chat (mobile & desktop)
+    window.open(url, "_blank");
+  }
+
+  function clearCart() {
+    cart.length = 0;
+    updateCartUI();
+  }
+</script>
+
+
+
+  <!-- Policy Modal (re-uses cart modal) -->
+  <template id="policy-terms">
+    <h3>Terms & Conditions</h3>
+    <p>Digital items are delivered instantly to your email/order page. Do not share or resell files. Ensure model compatibility before purchase. Misuse of files for illegal purposes is prohibited.</p>
+  </template>
+  <template id="policy-privacy">
+    <h3>Privacy Policy</h3>
+    <p>We collect only necessary data to process orders (name, email, phone). Payments are handled securely by trusted gateways (MPESA provider, card processor). We never store full card details.</p>
+  </template>
+  <template id="policy-refund">
+    <h3>Refund Policy</h3>
+    <p>Due to the nature of digital goods, refunds are issued only if a file is corrupted or not as described and we cannot resolve it past 24 hours. Contact support with your order number.</p>
+  </template>
+
+  <script>
+const products = [
+  // Samsung (12 items)
+  { id:'s-a226b-mdm-1', brand:'Samsung', model:'Galaxy A22 (A226B)', type:'MDM', price:0, title:'Samsung A22 MDM File', desc:'Knox/MDM remove.' },
+  { id:'s-a226b-mdm-2', brand:'Samsung', model:'Galaxy A22 (A226B)', type:'MDM', price:0, title:'Samsung A22 MDM File', desc:'Knox/MDM remove.' },
+  { id:'s-a226b-mdm-3', brand:'Samsung', model:'Galaxy A22 (A226B)', type:'MDM', price:0, title:'Samsung A22 MDM File', desc:'Knox/MDM remove.' },
+  { id:'s-a226b-mdm-4', brand:'Samsung', model:'Galaxy A22 (A226B)', type:'MDM', price:0, title:'Samsung A22 MDM File', desc:'Knox/MDM remove.' },
+  { id:'s-a226b-mdm-5', brand:'Samsung', model:'Galaxy A22 (A226B)', type:'MDM', price:0, title:'Samsung A22 MDM File', desc:'Knox/MDM remove.' },
+  { id:'s-a226b-mdm-6', brand:'Samsung', model:'Galaxy A22 (A226B)', type:'MDM', price:0, title:'Samsung A22 MDM File', desc:'Knox/MDM remove.' },
+  { id:'s-a226b-mdm-7', brand:'Samsung', model:'Galaxy A22 (A226B)', type:'MDM', price:0, title:'Samsung A22 MDM File', desc:'Knox/MDM remove.' },
+  { id:'s-a226b-mdm-8', brand:'Samsung', model:'Galaxy A22 (A226B)', type:'MDM', price:0, title:'Samsung A22 MDM File', desc:'Knox/MDM remove.' },
+  { id:'s-a226b-mdm-9', brand:'Samsung', model:'Galaxy A22 (A226B)', type:'MDM', price:0, title:'Samsung A22 MDM File', desc:'Knox/MDM remove.' },
+  { id:'s-a226b-mdm-10', brand:'Samsung', model:'Galaxy A22 (A226B)', type:'MDM', price:0, title:'Samsung A22 MDM File', desc:'Knox/MDM remove.' },
+  { id:'s-a226b-mdm-11', brand:'Samsung', model:'Galaxy A22 (A226B)', type:'MDM', price:0, title:'Samsung A22 MDM File', desc:'Knox/MDM remove.' },
+  { id:'s-a226b-mdm-12', brand:'Samsung', model:'Galaxy A22 (A226B)', type:'MDM', price:0, title:'Samsung A22 MDM File', desc:'Knox/MDM remove.' },
+
+  // Itel (12 items)
+  { id:'it-p37-mdm-1', brand:'Itel', model:'P37 (P651W)', type:'MDM', price:0, title:'Itel P37 MDM File', desc:'Unlock MDM.' },
+  { id:'it-p37-mdm-2', brand:'Itel', model:'P37 (P651W)', type:'MDM', price:0, title:'Itel P37 MDM File', desc:'Unlock MDM.' },
+  { id:'it-p37-mdm-3', brand:'Itel', model:'P37 (P651W)', type:'MDM', price:0, title:'Itel P37 MDM File', desc:'Unlock MDM.' },
+  { id:'it-p37-mdm-4', brand:'Itel', model:'P37 (P651W)', type:'MDM', price:0, title:'Itel P37 MDM File', desc:'Unlock MDM.' },
+  { id:'it-p37-mdm-5', brand:'Itel', model:'P37 (P651W)', type:'MDM', price:0, title:'Itel P37 MDM File', desc:'Unlock MDM.' },
+  { id:'it-p37-mdm-6', brand:'Itel', model:'P37 (P651W)', type:'MDM', price:0, title:'Itel P37 MDM File', desc:'Unlock MDM.' },
+  { id:'it-p37-mdm-7', brand:'Itel', model:'P37 (P651W)', type:'MDM', price:0, title:'Itel P37 MDM File', desc:'Unlock MDM.' },
+  { id:'it-p37-mdm-8', brand:'Itel', model:'P37 (P651W)', type:'MDM', price:0, title:'Itel P37 MDM File', desc:'Unlock MDM.' },
+  { id:'it-p37-mdm-9', brand:'Itel', model:'P37 (P651W)', type:'MDM', price:0, title:'Itel P37 MDM File', desc:'Unlock MDM.' },
+  { id:'it-p37-mdm-10', brand:'Itel', model:'P37 (P651W)', type:'MDM', price:0, title:'Itel P37 MDM File', desc:'Unlock MDM.' },
+  { id:'it-p37-mdm-11', brand:'Itel', model:'P37 (P651W)', type:'MDM', price:0, title:'Itel P37 MDM File', desc:'Unlock MDM.' },
+  { id:'it-p37-mdm-12', brand:'Itel', model:'P37 (P651W)', type:'MDM', price:0, title:'Itel P37 MDM File', desc:'Unlock MDM.' },
+
+  // Tecno (12 items)
+  { id:'t-kd7-mdm-1', brand:'Tecno', model:'KD7 (Spark 7)', type:'MDM', price:0, title:'Tecno KD7 MDM File', desc:'MDM removal file.' },
+  { id:'t-kd7-mdm-2', brand:'Tecno', model:'KD7 (Spark 7)', type:'MDM', price:0, title:'Tecno KD7 MDM File', desc:'MDM removal file.' },
+  { id:'t-kd7-mdm-3', brand:'Tecno', model:'KD7 (Spark 7)', type:'MDM', price:0, title:'Tecno KD7 MDM File', desc:'MDM removal file.' },
+  { id:'t-kd7-mdm-4', brand:'Tecno', model:'KD7 (Spark 7)', type:'MDM', price:0, title:'Tecno KD7 MDM File', desc:'MDM removal file.' },
+  { id:'t-kd7-mdm-5', brand:'Tecno', model:'KD7 (Spark 7)', type:'MDM', price:0, title:'Tecno KD7 MDM File', desc:'MDM removal file.' },
+  { id:'t-kd7-mdm-6', brand:'Tecno', model:'KD7 (Spark 7)', type:'MDM', price:0, title:'Tecno KD7 MDM File', desc:'MDM removal file.' },
+  { id:'t-kd7-mdm-7', brand:'Tecno', model:'KD7 (Spark 7)', type:'MDM', price:0, title:'Tecno KD7 MDM File', desc:'MDM removal file.' },
+  { id:'t-kd7-mdm-8', brand:'Tecno', model:'KD7 (Spark 7)', type:'MDM', price:0, title:'Tecno KD7 MDM File', desc:'MDM removal file.' },
+  { id:'t-kd7-mdm-9', brand:'Tecno', model:'KD7 (Spark 7)', type:'MDM', price:0, title:'Tecno KD7 MDM File', desc:'MDM removal file.' },
+  { id:'t-kd7-mdm-10', brand:'Tecno', model:'KD7 (Spark 7)', type:'MDM', price:0, title:'Tecno KD7 MDM File', desc:'MDM removal file.' },
+  { id:'t-kd7-mdm-11', brand:'Tecno', model:'KD7 (Spark 7)', type:'MDM', price:0, title:'Tecno KD7 MDM File', desc:'MDM removal file.' },
+  { id:'t-kd7-mdm-12', brand:'Tecno', model:'KD7 (Spark 7)', type:'MDM', price:0, title:'Tecno KD7 MDM File', desc:'MDM removal file.' },
+
+  // Infinix (12 items)
+  { id:'i-x6817-mdm-1', brand:'Infinix', model:'Note 30 (X6817)', type:'MDM', price:0, title:'Infinix X6817 MDM File', desc:'Remove MDM lock – tested.' },
+  { id:'i-x6817-mdm-2', brand:'Infinix', model:'Note 30 (X6817)', type:'MDM', price:0, title:'Infinix X6817 MDM File', desc:'Remove MDM lock – tested.' },
+  { id:'i-x6817-mdm-3', brand:'Infinix', model:'Note 30 (X6817)', type:'MDM', price:0, title:'Infinix X6817 MDM File', desc:'Remove MDM lock – tested.' },
+  { id:'i-x6817-mdm-4', brand:'Infinix', model:'Note 30 (X6817)', type:'MDM', price:0, title:'Infinix X6817 MDM File', desc:'Remove MDM lock – tested.' },
+  { id:'i-x6817-mdm-5', brand:'Infinix', model:'Note 30 (X6817)', type:'MDM', price:0, title:'Infinix X6817 MDM File', desc:'Remove MDM lock – tested.' },
+  { id:'i-x6817-mdm-6', brand:'Infinix', model:'Note 30 (X6817)', type:'MDM', price:0, title:'Infinix X6817 MDM File', desc:'Remove MDM lock – tested.' },
+  { id:'i-x6817-mdm-7', brand:'Infinix', model:'Note 30 (X6817)', type:'MDM', price:0, title:'Infinix X6817 MDM File', desc:'Remove MDM lock – tested.' },
+  { id:'i-x6817-mdm-8', brand:'Infinix', model:'Note 30 (X6817)', type:'MDM', price:0, title:'Infinix X6817 MDM File', desc:'Remove MDM lock – tested.' },
+  { id:'i-x6817-mdm-9', brand:'Infinix', model:'Note 30 (X6817)', type:'MDM', price:0, title:'Infinix X6817 MDM File', desc:'Remove MDM lock – tested.' },
+  { id:'i-x6817-mdm-10', brand:'Infinix', model:'Note 30 (X6817)', type:'MDM', price:0, title:'Infinix X6817 MDM File', desc:'Remove MDM lock – tested.' },
+  { id:'i-x6817-mdm-11', brand:'Infinix', model:'Note 30 (X6817)', type:'MDM', price:0, title:'Infinix X6817 MDM File', desc:'Remove MDM lock – tested.' },
+  { id:'i-x6817-mdm-12', brand:'Infinix', model:'Note 30 (X6817)', type:'MDM', price:0, title:'Infinix X6817 MDM File', desc:'Remove MDM lock – tested.' },
+];
+
+    const services = [
+      { id:'svc-sam-frp', title:'Samsung FRP Unlock (Online)', price:0, eta:'15–30 min', desc:'Remote FRP removal via USB + PC. Requires stable internet and TeamViewer/Anydesk.'},
+      { id:'svc-xiaomi-mi', title:'Xiaomi Mi Account and FRP Removal', price:0, eta:'Same day', desc:'Remote service. Provide SN/IMEI & model.'},
+      { id:'svc-pixel-frp', title:'Google Pixel pro frp(in fastboot mode) (Online)', price:0, eta:'15–30 min', desc:'Remote FRP removal via USB + PC. Requires stable internet'},
+      { id:'svc-blackscreen', title:'Tecno Itel Infinix Black screen(REGIONAL LOCK)', price:0, eta:'1–72 hrs', desc:'ORIGINAL IMEI NEEDED FOR SUBMISSION note:NO REFUND FOR BAD ORDER'},
+      { id:'svc-huawei-mi', title:'Huawei honor frp and huawei id', price:0, eta:'Same day', desc:'Remote service. Provide SN/IMEI & model others need USB + PC. Requires stable internet'},
+      { id:'svc-icloud-pin', title:'Icloud Bypass', price:0, eta:'1–3 hrs', desc:'all models register Serial Number for bypass.'},
+    ];
+
+    const courses = [
+      { id:'c-biginner-master', title:'🎓 BEGINNER PACKAGE', price:18, hours:72, level:'Beginner', bullet:['Introduction to Phone Software','Android System Overview','Basic FRP Bypass Techniques','Intro to MDM Lock'] },
+      { id:'c-inter', title:'⚙️ INTERMEDIATE PACKAGE', price:18, hours:72, level:'Intermediate', bullet:['Advanced Flashing Tools','Basic IMEI Repair Concepts','Different Chipsets','Unlocking FRP with advanced tools'] },
+      { id:'c-isp', title:'💻 PROFESSIONAL PACKAGE', price:18, hours:72, level:'pro', bullet:['ISP/f64/ufi/JTAG basics','Troubleshooting Dead Boot Devices','Dump/Write flows','Case studies','Quick Support'] },
+    ];
+
+    const tools = [
+      { id:'UT', title:'Unlocktool', price:4, desc:'1-6 hours log in period. Also whatsapp for activation' },
+      { id:'AMT', title:'Android Multi Tool', price:3, desc:'1-2 hours log in period.Also whatsapp for activation' },
+      { id:'PND', title:'Pandora Online Tool', price:13, desc:'1-48hrs log in period.Also whatsapp for activation' },
+      { id:'DFT', title:'DFT Pro', price:4, desc:'1-48hrs log in period.Also whatsapp for activation' },
+      { id:'ROBY', title:'Roby Tech Tool', price:8, desc:'1-6hrs log in period.Also whatsapp for activation' },
+      { id:'CM2', title:'CM2 Port sharing', price:6, desc:'1-6hrs need stable internet connection' },
+    ];
+
+    // State
+    const cart = [];
+
+    const $ = (q, c=document) => c.querySelector(q);
+    const $$ = (q, c=document) => Array.from(c.querySelectorAll(q));
+
+    // Render helpers
+    function money(n){ return new Intl.NumberFormat('en-KE').format(n); }
+
+    function productCard(p){
+      return `
+      <div class="card product">
+        <div class="p-top"></div>
+        <span class="tag">${p.tag || 'Verified'}</span>
+        <div class="p-body">
+          <div class="muted">${p.brand} · ${p.type}</div>
+          <div class="title">${p.title}</div>
+          <div class="muted">Model: ${p.model}</div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px">
+            <span class="price">$ ${money(p.price)}</span>
+            <button class="btn btn-primary" onclick='addToCart(${JSON.stringify(p)})'>Add</button>
+          </div>
+          <p class="muted" style="margin-top:8px">${p.desc}</p>
+        </div>
+      </div>`;
+    }
+
+    function serviceCard(s){
+      return `
+      <div class="card service item">
+        <div class="p-top"></div>
+        <div class="p-body">
+          <div class="title">${s.title}</div>
+          <p class="muted">${s.desc}</p>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px">
+            <span class="price">$ ${money(s.price)}</span>
+            <button class="btn btn-primary" onclick='addToCart(${JSON.stringify({ ...s, type:"Service" })})'>Order</button>
+          </div>
+          <small class="muted">ETA: ${s.eta}</small>
+        </div>
+      </div>`;
+    }
+
+    function courseCard(c){
+      return `
+      <div class="card course item">
+        <div class="p-top"></div>
+        <div class="p-body">
+          <div class="title">${c.title}</div>
+          <p class="muted">Level: ${c.level} · Duration: ${c.hours} hrs</p>
+          <ul class="muted">${(c.bullet||[]).map(x=>`<li>${x}</li>`).join('')}</ul>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px">
+            <span class="price">$ ${money(c.price)}</span>
+            <button class="btn btn-primary" onclick='addToCart(${JSON.stringify({ ...c, type:"Course" })})'>Enroll</button>
+          </div>
+        </div>
+      </div>`;
+    }
+
+    function toolCard(t){
+      return `
+      <div class="card item">
+        <div class="title">${t.title}</div>
+        <p class="muted">${t.desc}</p>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px">
+          <span class="price">${t.price? '$ '+money(t.price): 'Free'}</span>
+          <button class="btn btn-ghost" onclick="alert('This is a demo link. Replace with your valid download URL or product page.')">Get</button>
+        </div>
+      </div>`;
+    }
+
+    // Render lists
+    function renderProducts(){
+      const grid = $('#mdmGrid');
+      const q = $('#search').value.trim().toLowerCase();
+      const brand = $('#brandFilter').value;
+      const type = $('#typeFilter').value;
+      const filtered = products.filter(p =>
+        (!brand || p.brand === brand) && (!type || p.type === type) &&
+        (!q || (p.model+" "+p.title+" "+p.brand+" "+p.type).toLowerCase().includes(q))
+      );
+      grid.innerHTML = filtered.map(productCard).join('');
+      $('#statFiles').textContent = filtered.length + (q||brand||type? ' match' + (filtered.length===1?'':'es') : '+');
+    }
+
+    function renderServices(){ $('#servicesGrid').innerHTML = services.map(serviceCard).join(''); }
+    function renderCourses(){ $('#coursesGrid').innerHTML = courses.map(courseCard).join(''); }
+    function renderTools(){ $('#toolsGrid').innerHTML = tools.map(toolCard).join(''); }
+
+    // Cart
+    function addToCart(item){
+      const found = cart.find(c => c.id === item.id);
+      if(found){ found.qty += 1; } else { cart.push({ id:item.id, title:item.title, type:item.type||'File', price:item.price, qty:1 }); }
+      updateCartUI();
+    }
+    function removeFromCart(id){
+      const idx = cart.findIndex(c => c.id===id);
+      if(idx>-1){ cart.splice(idx,1); updateCartUI(); }
+    }
+    function updateCartUI(){
+      $('#cartCount').textContent = cart.reduce((n,x)=>n+x.qty,0);
+      const empty = cart.length===0;
+      $('#cartEmpty').style.display = empty? 'block':'none';
+      $('#cartArea').style.display = empty? 'none':'block';
+      const tb = $('#cartItems');
+      tb.innerHTML = cart.map(c=>`<tr>
+        <td>${c.title}</td><td>${c.type}</td>
+        <td><input type="number" min="1" value="${c.qty}" style="width:64px" onchange="changeQty('${c.id}', this.value)"></td>
+        <td>${money(c.price*c.qty)}</td>
+        <td><button class="btn btn-ghost" onclick="removeFromCart('${c.id}')">Remove</button></td>
+      </tr>`).join('');
+      const subtotal = cart.reduce((n,x)=>n + x.price*x.qty, 0);
+      $('#subtotal').textContent = money(subtotal);
+    }
+    function changeQty(id,val){
+      const q = Math.max(1, parseInt(val||1));
+      const it = cart.find(c=>c.id===id); if(it){ it.qty = q; updateCartUI(); }
+    }
+
+    function payMpesa(){
+      const phone = prompt('Enter MPESA phone (2547XXXXXXXX):');
+      if(!phone) return;
+      alert('Demo STK push to '+phone+' for $ '+$('#subtotal').textContent+'\n\nIntegrate with Daraja API / Pesapal / Flutterwave in production.');
+      // After success: generate fake links
+      if(cart.length){
+        const links = cart.map(c=>`<li><a href="#" onclick=\"alert('Demo link – replace with actual protected URL for ${c.title}.')\">Download/Order: ${c.title}</a></li>`).join('');
+        $('.sheet-body').insertAdjacentHTML('beforeend', `<div class="card item" style="margin-top:12px"><div class="title">Your items</div><ul>${links}</ul></div>`);
+      }
+    }
+
+    // Policy modal reuse
+    function openPolicy(which){
+      const tpl = {
+        terms: $('#policy-terms'), privacy: $('#policy-privacy'), refund: $('#policy-refund')
+      }[which];
+      if(!tpl) return;
+      const html = `<div class="sheet"><div class="sheet-head"><strong>${which.toUpperCase()}</strong><button class="btn btn-ghost" id="closeCart">Close</button></div><div class="sheet-body">${tpl.innerHTML}</div></div>`;
+      $('#cartModal').innerHTML = html; $('#cartModal').classList.add('show');
+      $('#closeCart').onclick = ()=>{ $('#cartModal').classList.remove('show'); restoreCartModal(); };
+    }
+
+    function restoreCartModal(){
+      $('#cartModal').innerHTML = document.querySelector('body > div.modal').outerHTML; // no-op placeholder
+      // Rebuild cart modal structure
+      $('#cartModal').outerHTML = `
+      <div class="modal" id="cartModal" aria-hidden="true" role="dialog">
+        <div class="sheet">
+          <div class="sheet-head">
+            <strong>Checkout</strong>
+            <button class="btn btn-ghost" id="closeCart">Close</button>
+          </div>
+          <div class="sheet-body">
+            <div id="cartEmpty" class="muted">Your cart is empty.</div>
+            <div id="cartArea" style="display:none">
+              <table>
+                <thead>
+                  <tr><th>Item</th><th>Type</th><th>Qty</th><th>Price ($)</th><th></th></tr>
+                </thead>
+                <tbody id="cartItems"></tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="3" style="text-align:right"><strong>Subtotal</strong></td>
+                    <td id="subtotal">0</td>
+                    <td></td>
+                  </tr>
+                </tfoot>
+              </table>
+              <div style="display:flex; gap:10px; margin-top:16px; flex-wrap:wrap">
+                <button class="btn btn-primary" onclick="payMpesa()">Pay with MPESA (Demo)</button>
+                <button class="btn btn-ghost" onclick="alert('Card payment demo – integrate Flutterwave/PayPal in production.')">Pay with Card (Demo)</button>
+              </div>
+              <p class="muted" style="margin-top:10px">After successful payment, your download links or service order number will be displayed and sent to your email.</p>
+            </div>
+          </div>
+        </div>
+      </div>`;
+      bindCartControls(); updateCartUI();
+    }
+
+    function bindCartControls(){
+      $('#fab').onclick = ()=>$('#cartModal').classList.add('show');
+      $('#openCart').onclick = ()=>$('#cartModal').classList.add('show');
+      $('#closeCart').onclick = ()=>$('#cartModal').classList.remove('show');
+    }
+
+    // Init
+    window.addEventListener('DOMContentLoaded', ()=>{
+      renderProducts(); renderServices(); renderCourses(); renderTools();
+      $('#search').oninput = renderProducts; $('#brandFilter').onchange = renderProducts; $('#typeFilter').onchange = renderProducts;
+      $('#year').textContent = new Date().getFullYear();
+      bindCartControls();
+    });
+  </script>
+</body>
+</html>
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 20 - https://www.wysiwygwebbuilder.com">
+<link href="ZOOM_TECH.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+</head>
+<body>
+</body>
+</html>
